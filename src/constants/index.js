@@ -5,6 +5,7 @@ import {
     postgres,
     vr,
     cve,
+    hxi,
     vcity,
     resnet50,
     snowpro,
@@ -165,25 +166,31 @@ import {
   
   const experiences = [
     {
-      title: "Software Engineer Co-op - Development and Production Data Solutions",
+      title: "XR Researcher",
+      company_name: "HXI Lab",
+      icon: hxi,
+      iconBg: "#060040",
+      date: "January 2024 - December 2024",
+      points: [
+        "Conduct research on human-XR interactions, focusing on improving user engagement and usability in immersive environments.",
+        'Published a workshop paper to IEEE VR 2025 on tangible user interfaces, contributing new insights into the design and application of physical interaction in XR systems.'
+      ]
+    },
+    {
+      title: "Software Engineer Intern - Data Solutions",
       company_name: "Cenovus Energy",
       icon: cve,
       iconBg: "#060040",
       date: "January 2024 - December 2024",
-      points:
-        [
-          "Collaborate with Canadian Oil Sands and Thermal Heavy Oil Operations Development and Production teams to understand their data needs and challenges.",
-          "Design and develop end-to-end data and analytics solutions tailored to the requirements of different teams.",
-          "Implement full-stack development solutions, including full-stack frameworks such as Ruby on Rails.",
-          "Perform data engineering tasks such as data ingestion, transformation, and storage optimization.",
-          "Orchestrate data pipelines for efficient and reliable data processing using tools such as Dagster.",
-          "Conduct analysis and reporting on large datasets to derive actionable insights.",
-          "Apply machine learning and statistical inference techniques to solve complex business problems.",
-          "Document processes, workflows, and technical implementations to ensure knowledge sharing and maintain accurate records.",
-          "Participate in training sessions and workshops to enable teams in adopting and effectively utilizing data solutions."
-        ]
-      
+      points: [
+        "Developed a Ruby on Rails application to centralize upstream operational data, reducing audit complexity and saving over $20 million annually.",
+        "Engineered automated data pipelines with Dagster to process high-volume data, ensuring low-latency delivery for critical workflows.",
+        "Built a failure detection tool that reduced upstream workflow processing time by 90%.",
+        "Contributed to an AI-powered Retrieval-Augmented Generation (RAG) chat application leveraging industry data.",
+        "Co-chaired the Cenovus Code Crew, leading workshops on modern frameworks and AI to foster innovation among early-career professionals."
+      ]
     },
+  
     {
       title: "Software Deployment Intern",
       company_name: "Vertical City",

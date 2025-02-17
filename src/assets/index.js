@@ -43,7 +43,9 @@ import shell from "./company/shell.png";
 import JA from "./company/JA.png";
 import ignite from './company/ignite.png';
 import vcity from './company/vcity.png';
-import cve from './company/cve.png'
+import cve from './company/cve.png';
+import hxi from './company/hxi.png';
+
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -68,6 +70,7 @@ export {
   dagster,
   postgres,
   cve,
+  hxi,
   vcity,
   resnet50,
   snowpro,
