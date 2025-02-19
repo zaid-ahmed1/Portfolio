@@ -55,6 +55,8 @@ import ttg from './ttg.jpg'
 import lotion from './lotion.jpg'
 import bravry from './bravry.jpg'
 import swipe from './swipe.png'
+import autolearn from './autolearn.png'
+import pulsebot from './pulsebot.png'
 
 import thelastshow from './thelastshow.jpg'
 import snowpro from './snowpro.jpg'
@@ -65,6 +67,8 @@ import graphic from "./graphic.png"
 import data from './data.png'
 
 export {
+  pulsebot,
+  autolearn,
   rails,
   unity,
   dagster,

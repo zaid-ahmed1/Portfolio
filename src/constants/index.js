@@ -1,4 +1,6 @@
 import {
+    pulsebot,
+    autolearn,
     rails,
     unity,
     dagster,
@@ -244,6 +246,21 @@ import {
 
   
   const projects = [
+    {
+      name: "AutoLeARn",
+      description: "Developed an interactive AR car maintenance platform with speech commands, hand gestures, and real-time guidance. Used Groq’s AI models for car detail extraction and repair instructions, integrating Perplexity for research-based reasoning and video tutorials.",
+      tags: [],
+      image: autolearn,
+      source_code_link: "https://github.com/zaid-ahmed1/AutoLeARn",
+    },
+    {
+      name: "PulseBot",
+      description:
+        "Built a custom chatbot using Retrieval-Augmented Generation (RAG) to clarify cardiovascular health metrics. Processed research studies, created a vector database with Chroma, and utilized OpenAI for embeddings and language model functionality.",
+      tags: [],
+      image: pulsebot,
+      source_code_link: "https://youtu.be/NzxAIegMgS0",
+    },
     {
       name: "BraVRy",
       description:
