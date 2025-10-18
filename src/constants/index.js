@@ -1,6 +1,7 @@
 import {
     pulsebot,
     autolearn,
+    hallofus,
     rails,
     unity,
     dagster,
@@ -247,6 +248,13 @@ import {
   
   const projects = [
     {
+      name: "Hall of Us",
+      description: "Developed an ai-powered mixed reality museum of hackathon memories where photos and videos become immersive exhibits you can explore on the Quest 3. Won 2nd Place at HackGT 2025.",
+      tags: [],
+      image: hallofus,
+      source_code_link: "https://github.com/zaid-ahmed1/Hall-Of-Us-XR/",
+    },
+    {
       name: "AutoLeARn",
       description: "Developed an interactive AR car maintenance platform with speech commands, hand gestures, and real-time guidance. Used Groq’s AI models for car detail extraction and repair instructions, integrating Perplexity for research-based reasoning and video tutorials.",
       tags: [],
@@ -316,7 +324,7 @@ import {
         "A 2D platforming game developed in Unity and C#. There are custom sprites, physics systems, and leaderboard.",
       tags: [],
       image: snowpro,
-      source_code_link: "https://play.unity.com/mg/other/build-rr1-1",
+      source_code_link: "https://play.unity.com/en/games/0cb5aaf8-d8cb-423c-9155-519e1e7bccd1/snow-pro",
     },
         {
       name: "ResNet-50 for Alzheimer's Diagnosis",

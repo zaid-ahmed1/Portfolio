@@ -57,7 +57,7 @@ import bravry from './bravry.jpg'
 import swipe from './swipe.png'
 import autolearn from './autolearn.png'
 import pulsebot from './pulsebot.png'
-
+import hallofus from './hallofus.png'
 import thelastshow from './thelastshow.jpg'
 import snowpro from './snowpro.jpg'
 import resnet50 from './resnet50.png'
@@ -69,6 +69,7 @@ import data from './data.png'
 export {
   pulsebot,
   autolearn,
+  hallofus,
   rails,
   unity,
   dagster,
