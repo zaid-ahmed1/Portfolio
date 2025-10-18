@@ -1,12 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Tilt } from "react-tilt";
-import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { link } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
-import { fadeIn, textVariant } from "../utils/motion";
 
 const ProjectCard = ({
   index,
@@ -16,22 +14,38 @@ const ProjectCard = ({
   image,
   source_code_link,
 }) => {
-  return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className='bg-tertiary p-5 rounded-2xl green-pink-gradient sm:w-[360px] w-full'
-      >
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const cardContent = (
+    <div className='bg-tertiary p-5 rounded-2xl green-pink-gradient sm:w-[360px] w-full'>
         <div className='relative w-full h-[200px]'>
           <img
             src={image}
             alt='project_image'
             className='w-full h-full object-cover rounded-2xl'
+            loading="lazy"
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextSibling.style.display = 'block';
+            }}
           />
+          <div 
+            className='w-full h-full bg-gray-600 rounded-2xl flex items-center justify-center text-white text-center p-4'
+            style={{ display: 'none' }}
+          >
+            Image failed to load
+          </div>
 
           <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
             <div
@@ -62,32 +76,57 @@ const ProjectCard = ({
             </p>
           ))}
         </div>
-      </Tilt>
-    </motion.div>
+    </div>
+  );
+
+  return (
+    <div>
+      {isMobile ? (
+        cardContent
+      ) : (
+        <Tilt
+          options={{
+            max: 45,
+            scale: 1,
+            speed: 450,
+          }}
+        >
+          {cardContent}
+        </Tilt>
+      )}
+    </div>
   );
 };
 
 const Works = () => {
+  useEffect(() => {
+    console.log('Projects loaded:', projects.length);
+    console.log('Projects data:', projects);
+  }, []);
+
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <div>
         <p className={`${styles.sectionSubText} `}>My work</p>
         <h2 className={`${styles.sectionHeadText}`}>Projects:</h2>
-      </motion.div>
-
-      <div className='w-full flex'>
-        <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
-          className='mt-3 text-secondary text-[22px] max-w-3xl leading-[30px]'
-        >
-          Here are some projects which demonstrate what I've learned. Where applicable, there are demos, repositories, or video links.
-        </motion.p>
       </div>
 
-      <div className='mt-20 flex flex-wrap gap-7'>
-        {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
-        ))}
+      <div className='w-full flex'>
+        <p className='mt-3 text-secondary text-[22px] max-w-3xl leading-[30px]'>
+          Here are some projects which demonstrate what I've learned. Where applicable, there are demos, repositories, or video links.
+        </p>
+      </div>
+
+      <div className='mt-20 flex flex-wrap gap-7 justify-center sm:justify-start'>
+        {projects && projects.length > 0 ? (
+          projects.map((project, index) => (
+            <ProjectCard key={`project-${index}`} index={index} {...project} />
+          ))
+        ) : (
+          <div className="text-white text-center w-full">
+            <p>No projects found. Please check the console for errors.</p>
+          </div>
+        )}
       </div>
     </>
   );

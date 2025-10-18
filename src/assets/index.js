@@ -45,6 +45,8 @@ import ignite from './company/ignite.png';
 import vcity from './company/vcity.png';
 import cve from './company/cve.png';
 import hxi from './company/hxi.png';
+import arcurve from './company/arcurve.png';
+
 
 
 import carrent from "./carrent.png";
@@ -76,6 +78,7 @@ export {
   postgres,
   cve,
   hxi,
+  arcurve,
   vcity,
   resnet50,
   snowpro,

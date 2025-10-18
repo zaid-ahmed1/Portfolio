@@ -9,6 +9,7 @@ import {
     vr,
     cve,
     hxi,
+    arcurve,
     vcity,
     resnet50,
     snowpro,
@@ -66,6 +67,10 @@ import {
     {
       id: "work",
       title: "Work",
+    },
+    {
+      id: "research",
+      title: "Research",
     },
     {
       id: "contact",
@@ -169,14 +174,27 @@ import {
   
   const experiences = [
     {
-      title: "XR Researcher",
+      title: "Software Engineering Researcher",
       company_name: "HXI Lab",
       icon: hxi,
       iconBg: "#060040",
-      date: "January 2024 - December 2024",
+      date: "January 2025 - Present",
       points: [
         "Conduct research on human-XR interactions, focusing on improving user engagement and usability in immersive environments.",
+        "Develop XR software using Unity and C# to create interactive experiences that integrate tangible user interfaces.",
         'Published a workshop paper to IEEE VR 2025 on tangible user interfaces, contributing new insights into the design and application of physical interaction in XR systems.'
+      ]
+    },
+    {
+      title: "Software Development Intern",
+      company_name: "Arcurve",
+      icon: arcurve,
+      iconBg: "#060040",
+      date: "May 2025 - August 2025",
+      points: [
+        "Built and maintained full-stack features using .NET and Angular in a Scrum-based client-facing app.",
+        "Used Jira for agile planning, sprint tracking, and issue resolution.",
+        'Co-developed and led the creation of a monitoring tool using Azure APIs, Angular, and C#, improving deployment visibility and operational insights.'
       ]
     },
     {
