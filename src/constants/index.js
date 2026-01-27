@@ -73,6 +73,10 @@ import {
       title: "Research",
     },
     {
+      id: "blog",
+      title: "Blog",
+    },
+    {
       id: "contact",
       title: "Contact",
     },
