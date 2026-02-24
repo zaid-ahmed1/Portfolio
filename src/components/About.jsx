@@ -29,13 +29,12 @@ const About = () => {
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview:</h2>
       </div>
-      <p className="mt-4 text-secondary text-[22px] max-w-3xl leading-[40px]">
-      I'm a software engineer passionate about how technology drives every industry. 
-      From Unity game development to healthcare solutions, I love diving in wherever I can make an impact. 
-      With two research publications and four hackathon wins, I'm just getting started. 
-      I'm fluent across the stack, quick to learn new tools, and always up for a challenge.
+      <p className="mt-4 text-secondary text-[22px] leading-[40px]">
+I’m a multidisciplinary engineer working across research, industry, and community spaces to turn ideas into real-world systems. From XR and Unity development to applied AI and practical software solutions, I build wherever technology can make a meaningful impact.
+Along the way I’ve led and contributed to collaborative projects that earned 6 hackathon wins and 3 publications, but what matters most to me is the people behind the work: mentoring, organizing, and building with communities to help others learn and ship their own ideas.
+I move comfortably across the stack, adapt quickly to new tools, and focus on bringing teams together to take projects from concept to deployment.
       </p>
-      <div className="mt-20 flex flex-wrap gap-10">
+      <div className="mt-20 flex flex-wrap gap-10 justify-center">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}

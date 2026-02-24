@@ -13,7 +13,7 @@ const Home = () => {
       <Tech />
       <Works />
       <Research />
-      <Blog />
+      {/* <Blog /> */}
       <div className="relative z-0">
         <Contact />
         <StarsCanvas />

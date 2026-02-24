@@ -58,6 +58,9 @@ import lotion from './lotion.jpg'
 import bravry from './bravry.jpg'
 import swipe from './swipe.png'
 import autolearn from './autolearn.png'
+import aegis from './aegis.jpg'
+import theclimb from './theclimb.png'
+import scriptar from './scriptar.png'
 import pulsebot from './pulsebot.png'
 import hallofus from './hallofus.png'
 import thelastshow from './thelastshow.jpg'
@@ -71,6 +74,9 @@ import data from './data.png'
 export {
   pulsebot,
   autolearn,
+  aegis,
+  theclimb,
+  scriptar,
   hallofus,
   rails,
   unity,

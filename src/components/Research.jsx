@@ -26,13 +26,13 @@ const Research = () => {
   const articles = [
     {
       title: "Quantifying Childhood Trauma: Causal Machine Learning Approaches to Mental Health Outcomes",
-      description: "Using causal machine learning (CML), this study quantifies how adverse childhood experiences (ACEs) impact mental health, revealing significant effects on depression risk and mental well-being.",
+      description: "Using causal machine learning (CML), to quantify how adverse childhood experiences (ACEs) impact mental health",
       paperUrl: "https://underline.io/lecture/110031-quantifying-childhood-trauma-causal-machine-learning-approaches-to-mental-health-outcomes" // Example URL - replace with actual URL
     },
     {
-      title: "TangibleMoments - IN PROGRESS",
-      description: "Reimagining how humans create, share, and relive memories. Stay tuned!",
-      // No paperUrl provided, so no link button will be shown
+      title: "TangibleMoments: Embedding XR Memories onto Physical Objects",
+      description: "Reimagining how humans share and relive memories and use them to connect with others.",
+      paperUrl: "https://ieeexplore.ieee.org/document/10973029/"
     },
   ];
 

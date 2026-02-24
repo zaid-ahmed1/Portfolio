@@ -1,6 +1,9 @@
 import {
     pulsebot,
     autolearn,
+    aegis,
+    theclimb,
+    scriptar,
     hallofus,
     rails,
     unity,
@@ -72,10 +75,10 @@ import {
       id: "research",
       title: "Research",
     },
-    {
-      id: "blog",
-      title: "Blog",
-    },
+    // {
+    //   id: "blog",
+    //   title: "Blog",
+    // },
     {
       id: "contact",
       title: "Contact",
@@ -104,7 +107,7 @@ import {
       icon: graphic,
     },
     {
-      title: "Data Science",
+      title: "Data Science and AI",
       icon: data,
     },
   ];
@@ -269,6 +272,27 @@ import {
 
   
   const projects = [
+    {
+      name: "The Climb",
+      description: "The Climb is a VR mountain climbing game about impermanence. The world below you collapses as you climb. Your only choice is to keep moving upward. Won 1st place at Calgary's largest hackathon.",
+      tags: [],
+      image: theclimb,
+      source_code_link: "https://devpost.com/software/the-climb-fy6pux",
+    },
+    {
+      name: "ScriptAR",
+      description: "ScriptAR is for language learners tackling non-Latin alphabets, turning unfamiliar characters into muscle memory. Built using Unity and OpenAI for the RayNeo X3 Pro glasses.",
+      tags: [],
+      image: scriptar,
+      source_code_link: "https://devpost.com/software/scriptar",
+    },
+    {
+      name: "Aegis",
+      description: "Aegis monitors transit feeds in real time, flags and prioritizes dangers, and explains them so operators can act faster. Built with AWS EC2 for deployment, AWS Bedrock for AI, and Vite. Won Best Use of AI at Hack the Change 2025.",
+      tags: [],
+      image: aegis,
+      source_code_link: "https://devpost.com/software/aegis-g9wjkd?_gl=1*11fc3yn*_gcl_au*MTA0ODQzNzkwNC4xNzY2Mzg0MDQ3*_ga*NTkyMTcxNzg5LjE3NTc3ODM2MDM.*_ga_0YHJK3Y10M*czE3NzE5NTkwNDkkbzExMyRnMSR0MTc3MTk2Mjk3MiRqNjAkbDAkaDA.",
+    },
     {
       name: "Hall of Us",
       description: "Developed an ai-powered mixed reality museum of hackathon memories where photos and videos become immersive exhibits you can explore on the Quest 3. Won 2nd Place at HackGT 2025.",
