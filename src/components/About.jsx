@@ -1,46 +1,46 @@
-import React from 'react';
-import { Tilt } from 'react-tilt';
-import { styles } from '../styles';
-import { services } from '../constants';
-import { SectionWrapper } from '../hoc/index'
+import React from "react";
+import { motion } from "framer-motion";
+import { styles } from "../styles";
+import { services } from "../constants";
+import { SectionWrapper } from "../hoc/index";
+import { fadeIn } from "../utils/motion";
 
-const ServiceCard = ({ index, title, icon}) => {
+const SkillTag = ({ title, icon, index }) => {
   return (
-    <Tilt className="xs:w-[250px] w-full">
-      <div className='w-full white-blue-gradient p-[1px] rounded-[20px] shadow-card'>
-        <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450
-        }} className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col">
-          <img src={icon} alt={title} className="w-16 h-16 object-contain" />
-          <h3 className='text-white text-[24px] font-bold text-center'>{title}</h3>
-        </div>
-      </div>
-    </Tilt>
-  )
-}
+    <motion.div
+      variants={fadeIn("up", "spring", index * 0.1, 0.5)}
+      className="flex items-center gap-3 px-5 py-3 bg-tertiary rounded-xl card-border card-border-hover"
+    >
+      <img src={icon} alt={title} className="w-8 h-8 object-contain" />
+      <span className="text-secondary text-[15px] font-medium">{title}</span>
+    </motion.div>
+  );
+};
 
 const About = () => {
   return (
     <>
       <div>
         <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview:</h2>
+        <h2 className={styles.sectionHeadText}>Overview.</h2>
       </div>
-      <p className="mt-4 text-secondary text-[22px] leading-[40px]">
-I’m a multidisciplinary engineer working across research, industry, and community spaces to turn ideas into real-world systems. From XR and Unity development to applied AI and practical software solutions, I build wherever technology can make a meaningful impact.
-Along the way I’ve led and contributed to collaborative projects that earned 6 hackathon wins and 3 publications, but what matters most to me is the people behind the work: mentoring, organizing, and building with communities to help others learn and ship their own ideas.
-I move comfortably across the stack, adapt quickly to new tools, and focus on bringing teams together to take projects from concept to deployment.
+      <p className="mt-4 text-secondary text-[18px] leading-[32px] max-w-4xl">
+        {"I'm a multidisciplinary engineer working across research, industry, and community spaces to turn ideas into real-world systems. From XR and Unity development to applied AI and practical software solutions, I build wherever technology can make a meaningful impact."}
       </p>
-      <div className="mt-20 flex flex-wrap gap-10 justify-center">
+      <p className="mt-4 text-secondary text-[18px] leading-[32px] max-w-4xl">
+        {"Along the way I've led and contributed to collaborative projects that earned "}
+        <span className="text-white font-bold">6 hackathon wins</span>
+        {" and "}
+        <span className="text-white font-bold">3 publications</span>
+        {", but what matters most to me is the people behind the work: mentoring, organizing, and building with communities to help others learn and ship their own ideas."}
+      </p>
+      <div className="mt-12 flex flex-wrap gap-4">
         {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
+          <SkillTag key={service.title} index={index} {...service} />
         ))}
       </div>
     </>
-  )
-}
+  );
+};
 
-export default SectionWrapper(About, "about")
+export default SectionWrapper(About, "about");

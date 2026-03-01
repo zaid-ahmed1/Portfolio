@@ -6,11 +6,6 @@ import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
-
-// fEuWPrix4kOaw9ONe
-//template_eohitoh
-//service_uzqin5o
-
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -67,64 +62,68 @@ const Contact = () => {
   };
 
   return (
-    <div
-      className={`xl:mt-12 flex justify-center`}
-    >
+    <div className="xl:mt-12 flex justify-center">
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className='max-w-2xl w-full bg-black-100 p-8 rounded-2xl'
+        className="max-w-2xl w-full bg-black-100 p-8 rounded-2xl card-border"
       >
         <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact:</h3>
+        <h3 className={styles.sectionHeadText}>Contact.</h3>
 
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className='mt-12 flex flex-col gap-8'
+          className="mt-10 flex flex-col gap-6"
         >
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Name:</span>
+          <label className="flex flex-col">
+            <span className="text-white font-medium mb-3">Name</span>
             <input
-              type='text'
-              name='name'
+              type="text"
+              name="name"
               value={form.name}
               onChange={handleChange}
               placeholder=""
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className="bg-tertiary py-4 px-6 text-white rounded-lg outline-none border border-subtle font-medium focus:border-accent transition-colors duration-200"
             />
           </label>
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Email:</span>
+          <label className="flex flex-col">
+            <span className="text-white font-medium mb-3">Email</span>
             <input
-              type='email'
-              name='email'
+              type="email"
+              name="email"
               value={form.email}
               onChange={handleChange}
               placeholder=""
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className="bg-tertiary py-4 px-6 text-white rounded-lg outline-none border border-subtle font-medium focus:border-accent transition-colors duration-200"
             />
           </label>
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Message:</span>
+          <label className="flex flex-col">
+            <span className="text-white font-medium mb-3">Message</span>
             <textarea
               rows={7}
-              name='message'
+              name="message"
               value={form.message}
               onChange={handleChange}
               placeholder=""
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className="bg-tertiary py-4 px-6 text-white rounded-lg outline-none border border-subtle font-medium focus:border-accent transition-colors duration-200 resize-none"
             />
           </label>
 
           <button
-            type='submit'
-            className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
+            type="submit"
+            className="bg-accent py-3 px-8 rounded-lg outline-none w-fit text-white font-bold hover:bg-[#7a4de0] transition-colors duration-200"
           >
             {loading ? "Sending..." : "Send"}
           </button>
         </form>
-      </motion.div>
 
+        <p className="mt-6 text-secondary text-[14px]">
+          Or reach me at{" "}
+          <a href="mailto:contact@zaid-ahmed.me" className="text-accent hover:underline">
+            contact@zaid-ahmed.me
+          </a>
+        </p>
+      </motion.div>
     </div>
   );
 };

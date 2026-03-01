@@ -1,25 +1,65 @@
-import React from 'react'
-import { motion } from 'framer-motion';
-import { styles } from '../styles';
-
+import React from "react";
+import { motion } from "framer-motion";
+import { styles } from "../styles";
+import { headshot } from "../assets";
 
 const Hero = () => {
   return (
-    <section className={`relative w-full py-20 mx-auto`}>
-      <div
-        className={`max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-center gap-5`}
-      >
-        <div className='flex flex-col justify-center items-center'>
-          <div className='w-5 h-5 rounded-full bg-[#915eff]'/>
-          <div className='w-1 h-20 violet-gradient'/>
-        </div>
-        <div>
-          <h1 className={`${styles.heroHeadText}`}>Hey there! I'm <span className='text-[#915eff]'>Zaid.</span></h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>I’m a multidisciplinary engineer who brings people together to turn ideas into real systems — leading collaborative projects that connect software, data, and human experience.</p>
-        </div>
+    <section className="relative w-full min-h-screen flex items-center justify-center mx-auto">
+      <div className={`max-w-4xl mx-auto ${styles.paddingX} flex flex-col items-center text-center gap-8 pt-24`}>
+        {/* Profile photo placeholder */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="w-[400px] h-[400px] rounded-full photo-glow bg-tertiary flex items-center justify-center overflow-hidden"
+        >
+          <img src={headshot} alt="Zaid Ahmed" className="w-full h-full object-cover" />
+        </motion.div>
+
+        {/* Heading */}
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
+          className={styles.heroHeadText}
+        >
+          {"Hey, I'm "}<span className="text-accent">Zaid.</span>
+        </motion.h1>
+
+        {/* Subtitle */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+          className={`${styles.heroSubText} text-secondary max-w-2xl`}
+        >
+          Multidisciplinary engineer turning ideas into real systems.
+        </motion.p>
+
+        {/* CTA Buttons */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.45, ease: "easeOut" }}
+          className="flex flex-wrap gap-4 justify-center mt-4"
+        >
+          <a
+            href="#work"
+            className="px-8 py-3 bg-accent rounded-lg text-white font-semibold hover:bg-[#7a4de0] transition-colors duration-200"
+          >
+            View My Work
+          </a>
+          <a
+            href="#contact"
+            className="px-8 py-3 border border-accent rounded-lg text-accent font-semibold hover:bg-accent/10 transition-colors duration-200"
+          >
+            Get In Touch
+          </a>
+        </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

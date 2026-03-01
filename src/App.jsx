@@ -1,5 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { About, Contact, Experience, Hero, Navbar, Tech, Works, StarsCanvas, Research, Blog, BlogPost } from './components'
+import { About, Contact, Experience, Hero, Navbar, Tech, Works, Research, Blog, BlogPost } from './components'
+
+const SectionDivider = () => <hr className="section-divider" />;
 
 const Home = () => {
   return (
@@ -9,15 +11,15 @@ const Home = () => {
         <Hero />
       </div>
       <About />
+      <SectionDivider />
       <Experience />
-      <Tech />
+      <SectionDivider />
+      {/* <Tech /> */}
       <Works />
+      <SectionDivider />
       <Research />
-      {/* <Blog /> */}
-      <div className="relative z-0">
-        <Contact />
-        <StarsCanvas />
-      </div>
+      <SectionDivider />
+      <Contact />
     </>
   );
 };

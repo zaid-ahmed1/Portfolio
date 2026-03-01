@@ -2,7 +2,11 @@
   "permissions": {
     "allow": [
       "Bash(npm install:*)",
-      "Bash(timeout 8 npm run dev:*)"
+      "Bash(timeout 8 npm run dev:*)",
+      "Bash(rm:*)",
+      "Bash(npm run:*)",
+      "Bash(xxd:*)",
+      "Bash(do echo:*)"
     ]
   }
 }
