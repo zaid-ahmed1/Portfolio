@@ -12,7 +12,7 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="w-[400px] h-[400px] rounded-full photo-glow bg-tertiary flex items-center justify-center overflow-hidden"
+          className="w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] lg:w-[400px] lg:h-[400px] rounded-full photo-glow bg-tertiary flex items-center justify-center overflow-hidden"
         >
           <img src={headshot} alt="Zaid Ahmed" className="w-full h-full object-cover" />
         </motion.div>
@@ -32,9 +32,9 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-          className={`${styles.heroSubText} text-secondary max-w-2xl`}
+          className={`${styles.heroSubText} text-secondary max-w-[85%] sm:max-w-2xl`}
         >
-          Multidisciplinary engineer turning ideas into real systems.
+          Multidisciplinary software engineer turning ideas into real systems.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -42,17 +42,19 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.45, ease: "easeOut" }}
-          className="flex flex-wrap gap-4 justify-center mt-4"
+          className="flex flex-wrap gap-4 justify-center mt-4 relative z-10"
         >
           <a
             href="#work"
-            className="px-8 py-3 bg-accent rounded-lg text-white font-semibold hover:bg-[#7a4de0] transition-colors duration-200"
+            onClick={(e) => { e.preventDefault(); document.getElementById("work")?.scrollIntoView({ behavior: "smooth" }); }}
+            className="px-8 py-3 bg-accent rounded-lg text-white font-semibold hover:bg-[#7a4de0] transition-colors duration-200 cursor-pointer"
           >
             View My Work
           </a>
           <a
             href="#contact"
-            className="px-8 py-3 border border-accent rounded-lg text-accent font-semibold hover:bg-accent/10 transition-colors duration-200"
+            onClick={(e) => { e.preventDefault(); document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" }); }}
+            className="px-8 py-3 border border-accent rounded-lg text-accent font-semibold hover:bg-accent/10 transition-colors duration-200 cursor-pointer"
           >
             Get In Touch
           </a>
