@@ -29,7 +29,7 @@ const About = () => {
       </p>
       <p className="mt-4 text-secondary text-[18px] leading-[32px] max-w-4xl">
         {"Along the way I've led and contributed to collaborative projects that earned "}
-        <span className="text-white font-bold">6 hackathon wins</span>
+        <span className="text-white font-bold">7 hackathon wins</span>
         {" and "}
         <span className="text-white font-bold">3 publications</span>
         {", but what matters most to me is the people behind the work: mentoring, organizing, and building with communities to help others learn and ship their own ideas."}
