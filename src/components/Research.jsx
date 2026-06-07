@@ -40,8 +40,7 @@ const Research = () => {
     {
       title: "Exploring Experiential Differences Between Virtual and Physical Memory-Linked Objects in Extended Reality",
       description: "A study of how physical, virtual, and gallery interfaces shape the way we relive and share memories — and the tradeoffs that reveal what we truly value in connection.",
-      // paperUrl: "https://doi.org/10.1145/3772363.3798977"
-      comingSoon: true,
+      paperUrl: "https://doi.org/10.1145/3772363.3798977"
     },
     {
       title: "TangibleMoments: Embedding XR Memories onto Physical Objects",
