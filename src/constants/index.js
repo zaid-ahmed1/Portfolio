@@ -160,6 +160,18 @@ import {
   
   const experiences = [
     {
+      title: "Full Stack and AI Developer",
+      company_name: "Cenovus Energy",
+      icon: cve,
+      iconBg: "#060040",
+      date: "May 2026 - Aug 2026",
+      points: [
+        "Developed and enhanced AI-powered applications and automation solutions to improve business processes, streamline workflows, and support digital initiatives across Cenovus.",
+        "Collaborated with stakeholders to design, build, and deploy data-driven tools that leveraged AI technologies, enterprise data, and modern software development practices to solve business challenges.",
+        "Used emerging AI frameworks and agent-based technologies, including LangGraph and Agno.",
+      ],
+    },
+    {
       title: "Software Engineering Researcher",
       company_name: "HXI Lab",
       icon: hxi,
