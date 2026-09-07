@@ -5,6 +5,7 @@ import {
     theclimb,
     scriptar,
     hallofus,
+    vrops,
     rails,
     unity,
     dagster,
@@ -263,6 +264,13 @@ import {
 
   
   const projects = [
+    {
+      name: "VR OPS",
+      description: "VR training simulator for natural gas compressor station operators, built for my University of Calgary capstone. Combines Unity and the Meta SDK for immersive simulation with a custom ESP32-based physical control panel for realistic hands-on interaction, plus a RAG-powered AI instructor that guides trainees through procedures in real time. Won Bronze at the UCalgary Capstone Fair.",
+      tags: [],
+      image: vrops,
+      source_code_link: "#",
+    },
     {
       name: "The Climb",
       description: "The Climb is a VR mountain climbing game about impermanence. The world below you collapses as you climb. Your only choice is to keep moving upward. Won 1st place at Calgary's largest hackathon.",

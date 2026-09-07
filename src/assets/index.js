@@ -39,6 +39,7 @@ import theclimb from './theclimb.png';
 import scriptar from './scriptar.png';
 import pulsebot from './pulsebot.png';
 import hallofus from './hallofus.png';
+import vrops from './vrops.png';
 import thelastshow from './thelastshow.jpg';
 import snowpro from './snowpro.jpg';
 import resnet50 from './resnet50.png';
@@ -69,6 +70,7 @@ export {
   lotion,
   bravry,
   swipe,
+  vrops,
   ttg,
   wordle,
   mysql,
