@@ -35,12 +35,6 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#36177D", en
 }
  
 
-.hash-span {
-  margin-top: -150px;
-  padding-bottom: 150px;
-  display: block;
-}
-
 .black-gradient {
   background: #000000; /* fallback for old browsers */
   background: -webkit-linear-gradient(
