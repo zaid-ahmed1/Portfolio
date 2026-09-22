@@ -37,7 +37,7 @@ const Blog = () => {
       </div>
 
       <p className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
-        Writing about software engineering, XR development, and things I'm learning along the way.
+        Writing about whatever I want.
       </p>
 
       <div className="mt-16 flex flex-wrap gap-7">

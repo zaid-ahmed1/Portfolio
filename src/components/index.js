@@ -8,6 +8,7 @@ import Contact from './Contact';
 import Research from './Research';
 import Blog from './Blog';
 import BlogPost from './BlogPost';
+import ScrollToTop from './ScrollToTop';
 
 export {
   Hero,
@@ -20,4 +21,5 @@ export {
   Blog,
   BlogPost,
   Contact,
+  ScrollToTop,
 }

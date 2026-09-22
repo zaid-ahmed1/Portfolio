@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { About, Contact, Experience, Hero, Navbar, Tech, Works, Research, Blog, BlogPost } from './components'
+import { About, Contact, Experience, Hero, Navbar, Tech, Works, Research, Blog, BlogPost, ScrollToTop } from './components'
 
 const SectionDivider = () => <hr className="section-divider" />;
 
@@ -19,6 +19,8 @@ const Home = () => {
       <SectionDivider />
       <Research />
       <SectionDivider />
+      <Blog />
+      <SectionDivider />
       <Contact />
     </>
   );
@@ -27,6 +29,7 @@ const Home = () => {
 const App = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="relative z-0 bg-primary">
         <Routes>
           <Route path="/" element={<Home />} />

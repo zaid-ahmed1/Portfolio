@@ -1,5 +1,5 @@
 // Import markdown files as raw strings
-import xrPost from './getting-started-with-xr.md?raw';
+import xrPost from './embracing-the-ephemeral.md?raw';
 
 // Blog posts with metadata
 // To add a new post:
@@ -9,10 +9,10 @@ import xrPost from './getting-started-with-xr.md?raw';
 
 export const posts = [
   {
-    slug: 'getting-started-with-xr',
-    title: 'Getting Started with XR Development',
-    date: '2025-01-15',
-    excerpt: 'XR development has become one of the most exciting fields in software engineering. Here\'s how to get started.',
+    slug: 'embracing-the-ephemeral',
+    title: 'Embracing the Ephemeral: How to Get the Most out of a Hackathon',
+    date: '2026-09-17',
+    excerpt: 'My thoughts on how to make the most of a hackathon weekend.',
     content: xrPost,
   },
 ];

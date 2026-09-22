@@ -55,10 +55,10 @@ import {
       id: "research",
       title: "Research",
     },
-    // {
-    //   id: "blog",
-    //   title: "Blog",
-    // },
+    {
+      id: "blog",
+      title: "Blog",
+    },
     {
       id: "contact",
       title: "Contact",

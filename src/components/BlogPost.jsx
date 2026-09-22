@@ -26,11 +26,18 @@ const BlogPost = () => {
           to="/#blog"
           className="text-secondary hover:text-white transition-colors flex items-center gap-2 mb-8"
         >
-          <span>&larr;</span> Back to Blog
+          <span>&larr;</span> Back to Portfolio
         </Link>
 
         {/* Post header */}
         <header className="mb-10">
+          {post.headerImage && (
+            <img
+              src={post.headerImage}
+              alt=""
+              className="w-full h-64 sm:h-80 object-cover rounded-2xl mb-8 shadow-lg"
+            />
+          )}
           <p className="text-gray-400 text-[14px] mb-2">{formattedDate}</p>
           <h1 className="text-white font-black text-[36px] sm:text-[48px] leading-tight">
             {post.title}
@@ -50,6 +57,9 @@ const BlogPost = () => {
               ),
               h3: ({ children }) => (
                 <h3 className="text-white font-bold text-[20px] mt-6 mb-3">{children}</h3>
+              ),
+              h4: ({ children }) => (
+                <h4 className="text-[#915eff] font-semibold text-[15px] uppercase tracking-wider mt-5 mb-2">{children}</h4>
               ),
               p: ({ children }) => (
                 <p className="text-gray-300 text-[17px] leading-[30px] mb-4">{children}</p>
@@ -81,6 +91,21 @@ const BlogPost = () => {
               ),
               blockquote: ({ children }) => (
                 <blockquote className="border-l-4 border-[#915eff] pl-4 italic text-gray-400 my-4">{children}</blockquote>
+              ),
+              img: ({ src, alt, title }) => (
+                <figure className="my-8">
+                  <img
+                    src={src}
+                    alt={alt || ''}
+                    title={title}
+                    className="w-full rounded-xl shadow-lg"
+                  />
+                  {title && (
+                    <figcaption className="mt-3 text-center text-gray-400 text-[15px] italic">
+                      {title}
+                    </figcaption>
+                  )}
+                </figure>
               ),
             }}
           >
