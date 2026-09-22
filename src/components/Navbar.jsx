@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import { styles } from "../styles";
 import { logo, menu, close } from "../assets";
@@ -8,6 +8,7 @@ import { navLinks } from "../constants";
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
+  const location = useLocation();
 
   return (
     <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary/80 backdrop-blur-lg border-b border-subtle`}>
@@ -34,7 +35,11 @@ const Navbar = () => {
               } hover:text-white text-[18px] font-medium cursor-pointer transition-colors duration-200`}
               onClick={() => setActive(link.title)}
             >
-              <a href={`#${link.id}`}>{link.title}</a>
+              {location.pathname === "/" ? (
+                <a href={`#${link.id}`}>{link.title}</a>
+              ) : (
+                <Link to={`/#${link.id}`}>{link.title}</Link>
+              )}
             </li>
           ))}
         </ul>
@@ -60,7 +65,11 @@ const Navbar = () => {
                     setActive(link.title);
                   }}
                 >
-                  <a href={`#${link.id}`}>{link.title}</a>
+                  {location.pathname === "/" ? (
+                    <a href={`#${link.id}`}>{link.title}</a>
+                  ) : (
+                    <Link to={`/#${link.id}`}>{link.title}</Link>
+                  )}
                 </li>
               ))}
             </ul>
