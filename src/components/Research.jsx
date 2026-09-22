@@ -7,7 +7,7 @@ const ResearchCard = ({ title, description, index, paperUrl, comingSoon }) => {
   return (
     <motion.div
       variants={fadeIn("up", "spring", index * 0.2, 0.6)}
-      className="bg-tertiary p-6 rounded-2xl flex-1 min-w-[280px] max-w-[380px] card-border card-border-hover flex flex-col"
+      className="bg-tertiary p-6 rounded-2xl sm:w-[360px] w-full card-border card-border-hover flex flex-col"
     >
       <div className="flex items-center gap-2 mb-4">
         <span className={`w-2 h-2 rounded-full ${comingSoon ? "bg-secondary" : "bg-accent"}`} />
